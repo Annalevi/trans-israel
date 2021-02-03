@@ -160,15 +160,15 @@ img{
 
 
 
-.contacts .flex{
-    justify-content: space-evenly;
+.contacts .grid{
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .contacts .card{
     margin: 18px 10px 40px;
     cursor: pointer;
     transition: transform 0.2s ease-in;
-    flex-wrap: wrap;
+    justify-self: center;
 }
 
 .contacts .card:hover{
@@ -274,9 +274,12 @@ img{
     }
 
     .main .flex,
-    .contacts .flex,
     .footer .flex{
         flex-direction: column;
+    }
+
+    .contacts .grid{
+        grid-template-columns:repeat(2, 1fr);
     }
 
     .services::before, .services::after{
@@ -295,6 +298,10 @@ img{
 
     .footer{
         height: 300px;
+    }
+
+    .footer .social{
+        text-align: center;
     }
 }
 
