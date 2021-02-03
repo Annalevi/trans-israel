@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root {
-    /*--primary-color:#047aed;*/
-    --primary-color:#F7A8B8;
+    --transBlue-color: #55CDFC;
+    --transPink-color:#F7A8B8;
     --secondary-color:#1c3fa8;
-    /*--dark-color:#002240;*/
     --dark-color:#b93852;
     --light-color:#f4f4f4;
     --success-color:#5cb85c;
@@ -53,7 +52,7 @@ img{
 /*navbar*/
 
 .navbar{
-    background-color: var(--primary-color);
+    background-color: var(--transPink-color);
     color: #fff;
 }
 
@@ -79,7 +78,7 @@ img{
 
 .main{
     height: 400px;
-    background-color: var(--primary-color);
+    background-color: var(--transPink-color);
     position: relative;
 }
 
@@ -100,6 +99,7 @@ img{
 .main .card{
     padding: 0;
     margin: 0;
+    border-radius: 50%;
 }
 
 .main .container div{
