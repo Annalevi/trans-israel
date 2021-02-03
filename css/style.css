@@ -175,11 +175,11 @@ img{
     transform: translateY(-15px);
 }
 
-.contacts .container img{
+/*.contacts .container img{
     height: 128px;
     width: 128px;
 }
-
+*/
 /*footer*/
 
 .footer{
@@ -249,7 +249,12 @@ img{
         -moz-transform: skewY(1deg);
         -ms-transform: skewY(1deg);
     }
+
+    .contacts .grid .card{
+        width: 18vw;
+    }
 }
+
 @media(max-width:500px){
     .navbar{
         height: 110px;
@@ -265,12 +270,11 @@ img{
     }
 
     .main .card{
-        margin: auto;
         max-width: 300px;
+        margin: 0;
     }
-
     .main{
-        height: 1000px;
+        height: 800px;
     }
 
     .main .flex,
@@ -278,15 +282,17 @@ img{
         flex-direction: column;
     }
 
-    .contacts .grid{
-        grid-template-columns:repeat(2, 1fr);
+    .contacts .grid .card{
+        width: 17vw;
+        margin-bottom: 20px;
+        padding: 5px;
     }
 
     .services::before, .services::after{
         content: "";
         position: absolute;
         height: 100px;
-        bottom: -1600px;
+        bottom: -1400px;
         right: 0;
         left: 0;
         background-color: #fff;
