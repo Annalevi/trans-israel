@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+/*base*/
 :root {
     --transBlue-color: #55CDFC;
     --transPink-color:#F7A8B8;
@@ -11,7 +12,7 @@
 }
 
 html{
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 *{
@@ -158,8 +159,6 @@ img{
 
 /*contacts*/
 
-
-
 .contacts .grid{
     grid-template-columns: repeat(4, 1fr);
 }
@@ -175,11 +174,6 @@ img{
     transform: translateY(-15px);
 }
 
-/*.contacts .container img{
-    height: 128px;
-    width: 128px;
-}
-*/
 /*footer*/
 
 .footer{
@@ -191,9 +185,15 @@ img{
     justify-content: space-evenly;
 }
 
-.footer .social i:hover{
-    transform: scale(0.98);
+.footer p{
+    margin: 0;
 }
+
+.footer .social i:hover{
+    transform: scale(1.2);
+}
+
+/*media query tablets and below*/
 
 @media(max-width:768px){
     .main .grid{
@@ -201,12 +201,14 @@ img{
     }
     .main .card{
         margin: auto;
+        margin-bottom: 60px;
     }
 
     .main h1,
     .main p,
     .about p,
-    .services p{
+    .services p,
+    .footer p{
         text-align: center;
     }
 
@@ -216,24 +218,6 @@ img{
 
     .main .flex{
         flex-direction: column;
-    }
-
-    .main .card{
-        margin-bottom: 60px;
-    }
-
-    .services::before, .services::after{
-        content: "";
-        position: absolute;
-        height: 100px;
-        bottom: -570px;
-        right: 0;
-        left: 0;
-        background-color: #fff;
-        transform: skewY(-1deg);
-        -webkit-transform: skewY(-1deg);
-        -moz-transform: skewY(-1deg);
-        -ms-transform: skewY(-1deg);
     }
 
     .main::before, .main::after{
@@ -248,6 +232,20 @@ img{
         -webkit-transform: skewY(1deg);
         -moz-transform: skewY(1deg);
         -ms-transform: skewY(1deg);
+    }
+
+    .services::before, .services::after{
+        content: "";
+        position: absolute;
+        height: 100px;
+        bottom: -570px;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        transform: skewY(-1deg);
+        -webkit-transform: skewY(-1deg);
+        -moz-transform: skewY(-1deg);
+        -ms-transform: skewY(-1deg);
     }
 
     .contacts .grid .card{
@@ -270,11 +268,17 @@ img{
     }
 
     .main .card{
-        max-width: 300px;
+        max-width: 80vw;
         margin: 0;
     }
+
+    .main img{
+        bottom: 0;
+        top: 20px;
+    }
+
     .main{
-        height: 800px;
+        height: 820px;
     }
 
     .main .flex,
@@ -283,7 +287,7 @@ img{
     }
 
     .contacts .grid .card{
-        width: 17vw;
+        width: 15vw;
         margin-bottom: 20px;
         padding: 5px;
     }
@@ -304,10 +308,6 @@ img{
 
     .footer{
         height: 300px;
-    }
-
-    .footer .social{
-        text-align: center;
     }
 }
 
